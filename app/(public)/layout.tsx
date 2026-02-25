@@ -1,10 +1,5 @@
-import { FilterIcon, HamburgerIcon } from "@/components/icons";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/components/ui/input-group";
-import { Search, UserIcon } from "lucide-react";
+import { HamburgerIcon } from "@/components/icons";
+import { UserIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,20 +29,7 @@ export default function HomeLayout({ children }: HomeLayoutProps) {
           </div>
         </div>
       </header>
-      <main className="p-4">
-        <div className="flex items-center gap-4">
-          <InputGroup className="w-full border-border h-10">
-            <InputGroupInput placeholder="Buscar..." />
-            <InputGroupAddon>
-              <Search />
-            </InputGroupAddon>
-          </InputGroup>
-
-          <FilterIcon className="text-icon"/>
-        </div>
-
-        {children}
-      </main>
+      <main className="p-4">{children}</main>
       <footer className="px-4">Footer</footer>
     </>
   );
